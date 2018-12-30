@@ -193,7 +193,7 @@ Invalid_argument exception for instance.
 
 let rec max_list (lst : int list) : int =
   match lst with
-    | [] -> raise Invalid_argument "need elements"
+    | [] -> raise (Invalid_argument "need elements")
     | [x] -> x
     | x::lst' ->
        if x > max_list lst' then x else max_list lst' ;;
