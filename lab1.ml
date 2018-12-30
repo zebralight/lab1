@@ -182,7 +182,7 @@ list. (What's a sensible return value for the empty list?)
 let rec sum (lst : int list) : int =
   match lst with
     | [] -> 0
-    | x::lst' -> x + sum lst'
+    | x::lst' -> x + sum lst' ;;
   
 (*......................................................................
 Exercise 8: Define a recursive function that returns the maximum
@@ -251,7 +251,8 @@ let rec prods (lst : (int * int) list) : int list =
   | (x, y) :: tail -> (x * y) :: (prods tail) ;;
 
 let dotprod (a : int list) (b : int list) : int =
-  failwith "dotprod not implemented" ;;
+  sum (prods (zip a b)) ;;
+
 
 (*======================================================================
 Part 4: High-order functional programming with map, filter, and fold
