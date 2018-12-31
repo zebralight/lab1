@@ -341,4 +341,4 @@ even numbers in its argument list.
 ......................................................................*)
    
 let evens : int list -> int list =
-  fun _ -> failwith "evens not implemented" ;;
+  filter (fun x -> x mod 2 = 0) 
