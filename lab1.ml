@@ -304,13 +304,16 @@ list:
     
 END IMPORTANT NOTES
 
+
 ........................................................................
 Exercise 11: Reimplement sum using fold_left, naming it sum_ho (for
 "higher order").
 ......................................................................*)
 
+open List ;;
+
 let sum_ho (lst : int list) : int =
-  failwith "sum_ho not implemented" ;;
+  fold_left (fun a b -> a + b) 0 lst ;;
 
 (*......................................................................
 Exercise 12: Reimplement prods using map.
