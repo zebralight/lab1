@@ -320,7 +320,7 @@ Exercise 12: Reimplement prods using map.
 ......................................................................*)
 
 let prods_ho (lst : (int * int) list) : int list =
-  failwith "prods_ho not implemented" ;;
+  map (fun (x, y) -> x * y) lst;;
   
 (*......................................................................
 Exercise 13: The OCaml List module provides, in addition to the map,
